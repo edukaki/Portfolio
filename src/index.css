@@ -4,9 +4,16 @@
 
 @layer base{
     html{
-        @apply font-ibarra bg-very-light-grey
+        @apply bg-very-light-grey
     }
     body{
-        @apply min-h-screen
+        @apply min-h-screen font-sans text-grayish-dark-blue text-base
     }
 }
+    H1, H2, H3{
+        @apply font-ibarra
+    }
+
+    H1,H2{
+        @apply font-bold
+    }
