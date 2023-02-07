@@ -7,7 +7,7 @@
     @apply bg-very-light-grey font-sans text-grayish-dark-blue text-base;
   }
   main {
-    @apply min-h-[calc(100vh-500px)] px-8;
+    @apply min-h-[calc(100vh-500px)] px-8 pb-4;
   }
   H1,
   H2,
@@ -19,7 +19,9 @@
   H2 {
     @apply font-bold;
   }
-
+  H1{
+    @apply text-[2.5rem] leading-[2.75rem]
+  }
   H2 {
     @apply text-[2.5rem];
   }
