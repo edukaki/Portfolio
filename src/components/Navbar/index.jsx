@@ -6,7 +6,7 @@ import BtnHamburger from './BtnHamburger';
 const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
   return (
-    <nav className="flex flex-row justify-between py-8 relative">
+    <nav className="flex flex-row justify-between p-8 relative">
       <Logo className="fill-grayish-dark-blue" />
       <ul
         className={`${
