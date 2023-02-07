@@ -5,9 +5,9 @@ import { ReactComponent as DownArrows } from '../../image/icons/down-arrows.svg'
 const Button = (props) => {
   return (
     <button
-      className={`group flex flex-row m-auto ${
+      className={`group flex flex-row m-auto tracking-[2px] ${
         props.secondary
-          ? 'py-3 text-grayish-dark-blue bg-white border-grayish-dark-blue border-2 hover:text-white hover:bg-grayish-dark-blue disabled:border-very-light-grey'
+          ? 'py-4 text-grayish-dark-blue bg-white border-grayish-dark-blue border-2 hover:text-white hover:bg-grayish-dark-blue disabled:border-very-light-grey'
           : 'text-white bg-dark-blue hover:bg-light-cyan disabled:bg-light-grey disabled:text-grayish-dark-blue'
       }`}
     >
