@@ -25,6 +25,9 @@
   H2 {
     @apply text-[2.5rem];
   }
+  H3{
+    @apply text-3xl
+  }
   p {
     @apply opacity-80;
   }
