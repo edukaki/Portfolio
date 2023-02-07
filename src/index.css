@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @layer base{
-    html{
-        @apply bg-very-light-grey
-    }
     body{
-        @apply min-h-screen px-8 font-sans text-grayish-dark-blue text-base
+        @apply bg-very-light-grey font-sans text-grayish-dark-blue text-base
     }
-}
+    main{
+        @apply min-h-[calc(100vh-500px)] px-8
+    }
     H1, H2, H3{
         @apply font-ibarra
     }
-
+    
     H1,H2{
         @apply font-bold
     }
+}
