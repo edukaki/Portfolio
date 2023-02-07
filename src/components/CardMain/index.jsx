@@ -4,14 +4,14 @@ import Button from '../Button';
 
 const CardMain = (props) => {
   return (
-    <section className="py-9">
+    <section>
       <img src={props.img} alt={props.alt} className="w-full" />
       <div
         className={`flex flex-col gap-6 py-10 ${
           props.border === 1
-            ? 'border-light-grey border-b-2 my-8'
+            ? 'border-light-grey border-b-2'
             : props.border === 2
-            ? 'border-light-grey border-y-2 my-8'
+            ? 'border-light-grey border-y-2 mt-8'
             : ''
         }`}
       >
