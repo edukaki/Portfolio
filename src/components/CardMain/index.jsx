@@ -9,11 +9,15 @@ const CardMain = (props) => {
         props.flow === 'normal'
           ? 'md:grid-cols-2 md:gap-16'
           : props.flow === 'reverse'
-          ? 'flex-row-reverse'
+          ? 'md:grid-cols-2 md:gap-16'
           : ''
       }`}
     >
-      <img src={props.img} alt={props.alt} className="w-full" />
+      <img
+        src={props.img}
+        alt={props.alt}
+        className={`w-full ${props.flow === 'reverse' && 'md:col-start-2'}`}
+      />
       <div
         className={`flex flex-col gap-6 py-10 ${
           props.border === 1
@@ -21,7 +25,7 @@ const CardMain = (props) => {
             : props.border === 2
             ? `border-light-grey border-y-2 ${props.flow ? '' : 'mt-8'}`
             : ''
-        } `}
+        } ${props.flow === 'reverse' && 'md:row-start-1'} `}
       >
         {props.titleWeight === 'bold' ? (
           <h2>{props.title}</h2>
