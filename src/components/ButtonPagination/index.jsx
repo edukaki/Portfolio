@@ -8,20 +8,27 @@ const ButtonPagination = (props) => {
   return (
     <ul className="grid grid-cols-2 border-y mt-16">
       <li className="border-r">
-        <Link to={props.prevLink} className="flex flex-col gap-4 py-6">
+        <Link
+          to={props.prevLink}
+          className="flex flex-col gap-4 py-6 md:flex-row md:items-center md:gap-8"
+        >
           <ArrowLeft />
-          <h3 className="font-bold">{props.prevProjectTitle}</h3>
-          <p>Previous Project</p>
+          <div className="flex flex-col gap-4">
+            <h3 className="font-bold">{props.prevProjectTitle}</h3>
+            <p>Previous Project</p>
+          </div>
         </Link>
       </li>
       <li>
         <Link
           to={props.nextLink}
-          className="flex flex-col gap-4 items-end py-6"
+          className="flex flex-col gap-4 items-end py-6 md:flex-row-reverse md:items-center md:gap-8"
         >
           <ArrowRight />
-          <h3 className="font-bold">{props.nextProjectTitle}</h3>
-          <p>Previous Project</p>
+          <div className="flex flex-col gap-4 items-end">
+            <h3 className="font-bold">{props.nextProjectTitle}</h3>
+            <p>Previous Project</p>
+          </div>
         </Link>
       </li>
     </ul>
