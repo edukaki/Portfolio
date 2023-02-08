@@ -14,21 +14,48 @@
   H3 {
     @apply font-ibarra;
   }
-
   H1,
   H2 {
     @apply font-bold;
   }
-  H1{
-    @apply text-[2.5rem] leading-[2.75rem]
+  H1 {
+    @apply text-[2.5rem] leading-[2.75rem];
   }
   H2 {
     @apply text-[2.5rem];
   }
-  H3{
-    @apply text-3xl
+  H3 {
+    @apply text-3xl;
   }
   p {
     @apply opacity-80;
+  }
+}
+
+@layer components {
+  .form {
+    @apply grid grid-flow-row;
+  }
+  .form > .inputContainer {
+    @apply grid grid-flow-row pb-8;
+  }
+  .form input,
+  textarea {
+    @apply bg-light-grey p-4 mt-4 mb-1 focus:outline-light-cyan
+  }
+  .form textarea{
+    @apply min-h-[150px]
+  }
+  .form label {
+    @apply font-bold;
+  }
+  .form input::placeholder {
+    @apply text-opacity-40;
+  }
+  .formInput--error {
+    @apply border-2 border-bright-red;
+  }
+  .formErrorMessage {
+    @apply text-bright-red font-bold;
   }
 }
