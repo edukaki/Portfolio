@@ -2,8 +2,11 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Button from '../../Button';
+import PropTypes from 'prop-types';
 
-export const FormContact = () => {
+export const FormContact = (props) => {
+  const { setRedirect } = props.redirect;
+
   const contact = useFormik({
     initialValues: {
       name: '',
@@ -21,7 +24,22 @@ export const FormContact = () => {
         .required('Required'),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            setRedirect(true);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   });
   return (
@@ -69,4 +87,8 @@ export const FormContact = () => {
       <Button text="Send message" margin="mr-auto" submit />
     </form>
   );
+};
+
+FormContact.propTypes = {
+  redirect: PropTypes.func,
 };
