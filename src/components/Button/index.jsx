@@ -6,7 +6,7 @@ const Button = (props) => {
   return (
     <button
       type={props.submit && 'submit'}
-      className={`group flex flex-row tracking-[2px] ${
+      className={`group flex flex-row tracking-[2px] w-fit ${
         !props.margin ? 'm-auto' : props.margin
       } ${
         props.secondary
