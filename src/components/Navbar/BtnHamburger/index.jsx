@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const BtnHamburger = (props) => {
   const { hamburger, setHamburger } = props.btnOnclick;
   return (
-    <button onClick={() => setHamburger(!hamburger)}>
+    <button onClick={() => setHamburger(!hamburger)} className="md:hidden">
       <div className="flex flex-col gap-[6px] m-auto">
         <div
           className={`w-6 h-[2px] bg-grayish-dark-blue ${
