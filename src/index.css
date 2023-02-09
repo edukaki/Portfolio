@@ -7,7 +7,7 @@
     @apply bg-very-light-grey font-sans text-grayish-dark-blue text-base;
   }
   main {
-    @apply min-h-[calc(100vh-500px)] px-8 pb-4;
+    @apply min-h-[calc(100vh-500px)] px-8 pb-4 2xl:max-w-[77%] 2xl:m-auto;
   }
   H1,
   H2,
@@ -41,10 +41,10 @@
   }
   .form input,
   textarea {
-    @apply bg-light-grey p-4 mt-4 mb-1 focus:outline-light-cyan
+    @apply bg-light-grey p-4 mt-4 mb-1 focus:outline-light-cyan;
   }
-  .form textarea{
-    @apply min-h-[150px]
+  .form textarea {
+    @apply min-h-[150px];
   }
   .form label {
     @apply font-bold;
