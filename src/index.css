@@ -6,6 +6,9 @@
   body {
     @apply bg-very-light-grey font-sans text-grayish-dark-blue text-base;
   }
+  nav {
+    @apply relative p-8 2xl:max-w-[77%] 2xl:px-0 2xl:m-auto;
+  }
   main {
     @apply min-h-[calc(100vh-500px)] px-8 pb-4 2xl:max-w-[77%] 2xl:px-0 2xl:m-auto;
   }
