@@ -29,6 +29,7 @@ const Navbar = () => {
         <li className="p-4">
           <Link
             to="/portfolio"
+            onClick={() => setHamburger(false)}
             className={(isActive) =>
               isActive ? 'text-light-cyan font-bold' : ''
             }
@@ -39,6 +40,7 @@ const Navbar = () => {
         <li className="p-4">
           <Link
             to="/contact"
+            onClick={() => setHamburger(false)}
             className={(isActive) =>
               isActive ? 'text-light-cyan font-bold' : ''
             }
