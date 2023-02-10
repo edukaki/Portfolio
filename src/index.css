@@ -6,7 +6,8 @@
   body {
     @apply bg-very-light-grey font-sans text-grayish-dark-blue text-base;
   }
-  nav {
+  nav,
+  header {
     @apply relative p-8 2xl:max-w-[77%] 2xl:px-0 2xl:m-auto;
   }
   main {
@@ -25,7 +26,7 @@
     @apply font-bold;
   }
   H1 {
-    @apply text-[2.5rem] leading-[2.75rem];
+    @apply text-[2.5rem] leading-[2.75rem] 2xl:text-[50px];
   }
   H2 {
     @apply text-[2.5rem];
