@@ -10,7 +10,7 @@ const Navbar = () => {
       <Logo className="fill-grayish-dark-blue" />
       <ul
         className={`${
-          !hamburger ? 'opacity-0' : 'opacity-100'
+          !hamburger ? 'hidden opacity-0' : 'opacity-100'
         } absolute top-[100%] right-0 py-6 px-14 bg-grayish-dark-blue text-white tracking-[2px] text-center uppercase transition-all duration-300
         md:opacity-100 md:flex md:flex-row md:top-auto md:right-auto md:relative md:bg-transparent md:text-inherit md:px-0
         `}
@@ -18,6 +18,7 @@ const Navbar = () => {
         <li className="p-4">
           <NavLink
             to="/"
+            onClick={() => setHamburger(false)}
             className={(isActive) =>
               isActive ? 'text-light-cyan font-bold' : ''
             }
@@ -26,10 +27,24 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className="p-4">
-          <Link to="/portfolio">Portfolio</Link>
+          <Link
+            to="/portfolio"
+            className={(isActive) =>
+              isActive ? 'text-light-cyan font-bold' : ''
+            }
+          >
+            Portfolio
+          </Link>
         </li>
         <li className="p-4">
-          <Link to="/contact">Contact me</Link>
+          <Link
+            to="/contact"
+            className={(isActive) =>
+              isActive ? 'text-light-cyan font-bold' : ''
+            }
+          >
+            Contact me
+          </Link>
         </li>
       </ul>
       <BtnHamburger btnOnclick={{ hamburger, setHamburger }} />
