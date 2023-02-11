@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../image/logo.svg';
 import BtnHamburger from './BtnHamburger';
 
@@ -19,34 +19,34 @@ const Navbar = () => {
           <NavLink
             to="/"
             onClick={() => setHamburger(false)}
-            className={(isActive) =>
-              isActive ? 'text-light-cyan font-bold' : ''
+            className={({ isActive }) =>
+              isActive ? 'text-light-cyan font-bold' : undefined
             }
           >
             Home
           </NavLink>
         </li>
         <li className="p-4">
-          <Link
+          <NavLink
             to="/portfolio"
             onClick={() => setHamburger(false)}
-            className={(isActive) =>
-              isActive ? 'text-light-cyan font-bold' : ''
+            className={({ isActive }) =>
+              isActive ? 'text-light-cyan font-bold' : undefined
             }
           >
             Portfolio
-          </Link>
+          </NavLink>
         </li>
         <li className="p-4">
-          <Link
+          <NavLink
             to="/contact"
             onClick={() => setHamburger(false)}
-            className={(isActive) =>
-              isActive ? 'text-light-cyan font-bold' : ''
+            className={({ isActive }) =>
+              isActive ? 'text-light-cyan font-bold' : undefined
             }
           >
             Contact me
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <BtnHamburger btnOnclick={{ hamburger, setHamburger }} />
